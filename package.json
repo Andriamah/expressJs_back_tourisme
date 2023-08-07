@@ -1,5 +1,5 @@
 {
-  "name": "projet_android_binome",
+  "name": "backend",
   "version": "1.0.0",
   "description": "Back android",
   "main": "server.js",
@@ -7,25 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Andriamah/projet_android_binome.git"
-  },
   "author": "Elodie & Tony",
   "license": "ISC",
   "keywords": [],
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
-    "cors": "^2.8.5",
     "express": "^4.18.2",
     "mysql": "^2.18.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
-  },
-  "bugs": {
-    "url": "https://github.com/Andriamah/projet_android_binome/issues"
-  },
-  "homepage": "https://github.com/Andriamah/projet_android_binome#readme"
+  }
 }

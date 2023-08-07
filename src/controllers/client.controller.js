@@ -34,6 +34,7 @@ Client.findAll(function(err, clients) {
 // };
 
 exports.update = function(req, res) {
+  console.log('update tsika')
   if(req.body.constructor === Object && Object.keys(req.body).length === 0){
     res.status(400).send({ error:true, message: 'Please provide all required field' });
   }else{
@@ -62,7 +63,6 @@ exports.register = function (req, res) {
 
     // Vérifier si toutes les informations requises sont fournies
     if (!nom || !prenom || !pseudo || !mail || !mdp) {
-      console.log('Controller client post')
       return res.status(400).json({ error: 'Toutes les informations sont requises' });
     }
 
@@ -106,6 +106,14 @@ exports.register = function (req, res) {
       }
     });
   }
+};
+
+exports.findById = function (req, res) {
+  Client.findById(req.params.id, function (err, notif) {
+    if (err)
+      res.send(err);
+    res.json(notif);
+  });
 };
 
 exports.login = function (req, res) {
