@@ -9,6 +9,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 // parse requests of content-type - application/json
 app.use(bodyParser.json())
+app.disable('etag');
 // define a root route
 app.get('/', (req, res) => {
   res.send("Hello World");
